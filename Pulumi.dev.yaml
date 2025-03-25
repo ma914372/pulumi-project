@@ -1,0 +1,34 @@
+config:
+  pulumi-nginx:kubeconfig: |-
+    apiVersion: v1
+    clusters:
+    - cluster:
+        certificate-authority: /Users/madhurimaray/.minikube/ca.crt
+        extensions:
+        - extension:
+            last-update: Tue, 25 Mar 2025 14:28:33 IST
+            provider: minikube.sigs.k8s.io
+            version: v1.35.0
+          name: cluster_info
+        server: https://127.0.0.1:63050
+      name: minikube
+    contexts:
+    - context:
+        cluster: minikube
+        extensions:
+        - extension:
+            last-update: Tue, 25 Mar 2025 14:28:33 IST
+            provider: minikube.sigs.k8s.io
+            version: v1.35.0
+          name: context_info
+        namespace: default
+        user: minikube
+      name: minikube
+    current-context: minikube
+    kind: Config
+    preferences: {}
+    users:
+    - name: minikube
+      user:
+        client-certificate: /Users/madhurimaray/.minikube/profiles/minikube/client.crt
+        client-key: /Users/madhurimaray/.minikube/profiles/minikube/client.key
