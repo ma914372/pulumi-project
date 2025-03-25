@@ -46,9 +46,11 @@ Ensure you have the following installed:
 
 4. **Verify Deployment:**
    ```sh
-   kubectl get deployments -n app-namespace
-   kubectl get services -n app-namespace
-   kubectl get ingresses -n app-namespace
+   kubectl get deployment nginx -n app-namespace
+   kubectl get svc -n app-namespace
+   kubectl get ingress -n app-namespace
+   kubectl get deployment -n kube-system metrics-server
+   kubectl get pods -n app-namespace
    ```
 
 ## Obtaining Metrics
@@ -60,6 +62,7 @@ kubectl top nodes
 To check HPA status:
 ```sh
 kubectl get hpa -n app-namespace
+kubectl describe hpa -n app-namespace nginx-hpa
 ```
 
 ## Cleanup
