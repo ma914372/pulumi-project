@@ -17,7 +17,7 @@ This Pulumi typescript code provisions Nginx deployment on Kubernetes(minikube) 
   - Uses an **Ingress Controller** for external access.
 - **Kubernetes Add-ons:**
   - **Metrics Server:** Provides resource usage metrics for autoscaling.
-  - **Ingress Controller:** Manages incoming traffic to services.
+  - **Ingress :** Manages incoming traffic to services.
 
 ## Prerequisites
 Below are the following that needs to be installed:
