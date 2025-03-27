@@ -20,7 +20,7 @@ This Pulumi typescript code provisions Nginx deployment on Kubernetes(minikube) 
   - **Ingress Controller:** Manages incoming traffic to services.
 
 ## Prerequisites
-Ensure you have the following installed:
+Below are the following that needs to be installed:
 - [Pulumi CLI](https://www.pulumi.com/docs/install/)
 - [Node.js](https://nodejs.org/)
 - A running Kubernetes cluster in this case Minikube
