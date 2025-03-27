@@ -73,4 +73,4 @@ pulumi stack rm dev
 ```
 
 ## Conclusion
-This setup ensures a robust, autoscalable, and accessible Nginx deployment on Kubernetes. By integrating necessary Kubernetes add-ons, it enables seamless monitoring, traffic management, and performance optimization.
+This setup ensures a robust, autoscalable, and accessible Nginx deployment on Kubernetes. By integrating necessary Kubernetes add-ons, it enables seamless monitoring, and traffic management.
