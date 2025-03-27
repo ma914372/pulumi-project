@@ -22,8 +22,11 @@ const metricsServerDeployment = new k8s.apps.v1.Deployment("metrics-server", {
                     image: "registry.k8s.io/metrics-server/metrics-server:v0.6.3",
                     args: [
                         "--cert-dir=/tmp",
-
-                        "--kubelet-insecure-tls"
+                        "--secure-port=443",
+                        "--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname",
+                        "--kubelet-use-node-status-port",
+                        "--metric-resolution=15s",
+                        
                         
                     ],
                     ports: [{ containerPort: 443 }]
@@ -94,7 +97,7 @@ const ingress = new k8s.networking.v1.Ingress("nginx-ingress", {
         name: "nginx-ingress",
         namespace: namespace.metadata.name,
         annotations: {
-            "kubernetes.io/ingress.class": "nginx",
+            
             
         },
     },
