@@ -26,6 +26,7 @@ const metricsServerDeployment = new k8s.apps.v1.Deployment("metrics-server", {
                         "--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname",
                         "--kubelet-use-node-status-port",
                         "--metric-resolution=15s",
+                        "--kubelet-insecure-tls"
                         
                         
                     ],
@@ -96,10 +97,7 @@ const ingress = new k8s.networking.v1.Ingress("nginx-ingress", {
     metadata: {
         name: "nginx-ingress",
         namespace: namespace.metadata.name,
-        annotations: {
-            
-            
-        },
+        
     },
     spec: {
         ingressClassName: "nginx",
